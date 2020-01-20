@@ -1,0 +1,55 @@
+<div>
+  {{title}}
+  <table>
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td><input type="text" (ngModel)='Id' /></td>
+        <td>Name</td>
+        <td><input type="text" (ngModel)='Name' /></td>
+        <td>Address</td>
+        <td><input type="text" (ngModel)='Address' /></td>
+        <td>Mobile.No</td>
+        <td><input type="text" (ngModel)='ContactNumber' /></td>
+      </tr>
+    </thead>
+  </table>
+  <br />
+  <table>
+    <thead>
+      <tr>
+        <th>Sr.No</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile.No</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Result">
+        <td>{{$item + 1}}</td>
+        <td>{{item.StudentName}}</td>
+        <td>{{item.Address}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Contact}}</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr *ngFor="let item of product">
+        <td>{{$item + 1}}</td>
+        <td>{{item.total}}</td>
+        <td>{{item.productname}}</td>
+        <td>{{item.productdescription}}</td>
+        <td>{{item.productdescription01}}</td>
+        <td>{{item.productcost}}</td>
+        <td>{{item.productsrc}}</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr *ngFor="let item of people$">
+        <td>{{$item + 1}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {{people$}}
+</div>
